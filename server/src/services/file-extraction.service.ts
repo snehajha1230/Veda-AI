@@ -1,5 +1,5 @@
 import fs from "fs";
-import { PDFParse } from "pdf-parse";
+import { extractText, getDocumentProxy } from "unpdf";
 import { getGeminiClient, isGeminiConfigured } from "./llm/gemini.provider.js";
 import { env } from "../config/env.js";
 
@@ -45,16 +45,12 @@ async function extractWithGeminiDocument(
   return normalizeText(result.response.text() ?? "");
 }
 
-/** pdf-parse v2+ uses PDFParse class, not a default function. */
+/** Node-safe PDF text extraction (serverless pdf.js via unpdf). */
 async function extractPdfText(filePath: string): Promise<string> {
   const buffer = fs.readFileSync(filePath);
-  const parser = new PDFParse({ data: buffer });
-  try {
-    const result = await parser.getText();
-    return normalizeText(result.text ?? "");
-  } finally {
-    await parser.destroy();
-  }
+  const pdf = await getDocumentProxy(new Uint8Array(buffer));
+  const { text } = await extractText(pdf, { mergePages: true });
+  return normalizeText(text ?? "");
 }
 
 /**

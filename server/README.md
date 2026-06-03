@@ -88,7 +88,7 @@ Server: **http://localhost:4000** · WebSocket: **ws://localhost:4000/ws**
 | `title` | string | no |
 | `additionalInfo` | string | no |
 
-**Source extraction:** TXT is read directly; PDF uses `pdf-parse` (Gemini vision fallback if sparse); images use Gemini vision. Generation sends both extracted text and the original file to Gemini when possible.
+**Source extraction:** TXT is read directly; PDF uses `unpdf` (Gemini fallback if sparse); images use Gemini vision. Generation sends both extracted text and the original file to Gemini when possible.
 
 ### Other routes
 
