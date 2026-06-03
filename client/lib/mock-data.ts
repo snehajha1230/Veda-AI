@@ -1,0 +1,148 @@
+import type { Assignment, QuestionPaper } from "@/types/assignment";
+
+export const SAMPLE_ASSIGNMENTS: Assignment[] = [
+  {
+    id: "1",
+    title: "Quiz on Electricity",
+    assignedOn: "20-06-2025",
+    dueDate: "21-06-2025",
+    status: "ready",
+  },
+  {
+    id: "2",
+    title: "Quiz on Electricity",
+    assignedOn: "20-06-2025",
+    dueDate: "21-06-2025",
+    status: "ready",
+  },
+  {
+    id: "3",
+    title: "Quiz on Electricity",
+    assignedOn: "20-06-2025",
+    dueDate: "21-06-2025",
+    status: "ready",
+  },
+  {
+    id: "4",
+    title: "Quiz on Electricity",
+    assignedOn: "20-06-2025",
+    dueDate: "21-06-2025",
+    status: "ready",
+  },
+  {
+    id: "5",
+    title: "Quiz on Electricity",
+    assignedOn: "20-06-2025",
+    dueDate: "21-06-2025",
+    status: "ready",
+  },
+  {
+    id: "6",
+    title: "Quiz on Electricity",
+    assignedOn: "20-06-2025",
+    dueDate: "21-06-2025",
+    status: "ready",
+  },
+];
+
+export const MOCK_QUESTION_PAPER: QuestionPaper = {
+  schoolName: "Delhi Public School, Sector-4, Bokaro",
+  subject: "English",
+  className: "5th",
+  timeAllowed: "45 minutes",
+  maximumMarks: 20,
+  generalInstructions: "All questions are compulsory unless stated otherwise.",
+  sections: [
+    {
+      id: "a",
+      letter: "A",
+      title: "Short Answer Questions",
+      instruction:
+        "Attempt all questions. Each question carries 2 marks",
+      questions: [
+        {
+          id: "q1",
+          number: 1,
+          text: "What is the main idea of the poem you studied in class?",
+          difficulty: "easy",
+          marks: 2,
+        },
+        {
+          id: "q2",
+          number: 2,
+          text: "Identify the figure of speech in the given line and explain its effect.",
+          difficulty: "moderate",
+          marks: 2,
+        },
+        {
+          id: "q3",
+          number: 3,
+          text: "Write a short note on the theme of friendship in the story.",
+          difficulty: "easy",
+          marks: 2,
+        },
+        {
+          id: "q4",
+          number: 4,
+          text: "Compare the characters of the protagonist and antagonist in two sentences.",
+          difficulty: "moderate",
+          marks: 2,
+        },
+        {
+          id: "q5",
+          number: 5,
+          text: "Correct the following sentence and rewrite it: 'She don't like apples.'",
+          difficulty: "easy",
+          marks: 2,
+        },
+        {
+          id: "q6",
+          number: 6,
+          text: "Define 'metaphor' and give one example from your textbook.",
+          difficulty: "easy",
+          marks: 2,
+        },
+        {
+          id: "q7",
+          number: 7,
+          text: "Why did the author choose a first-person narrative in the story?",
+          difficulty: "moderate",
+          marks: 2,
+        },
+        {
+          id: "q8",
+          number: 8,
+          text: "List three qualities of a good leader as described in the passage.",
+          difficulty: "easy",
+          marks: 2,
+        },
+        {
+          id: "q9",
+          number: 9,
+          text: "Analyze how setting influences the mood of the story in 3–4 lines.",
+          difficulty: "hard",
+          marks: 2,
+        },
+        {
+          id: "q10",
+          number: 10,
+          text: "Suggest an alternate ending to the story in your own words.",
+          difficulty: "hard",
+          marks: 2,
+        },
+      ],
+    },
+  ],
+  answerKey: [
+    { questionNumber: 1, answer: "The main idea centers on courage and hope." },
+    { questionNumber: 2, answer: "Simile — compares two unlike things using 'like' or 'as'." },
+    { questionNumber: 3, answer: "Friendship is shown through loyalty and sacrifice." },
+    { questionNumber: 4, answer: "Protagonist is kind; antagonist is selfish and proud." },
+    { questionNumber: 5, answer: "She doesn't like apples." },
+    { questionNumber: 6, answer: "Metaphor: direct comparison without 'like' or 'as'." },
+    { questionNumber: 7, answer: "Creates intimacy and immediacy for the reader." },
+    { questionNumber: 8, answer: "Honesty, empathy, and decisiveness." },
+    { questionNumber: 9, answer: "Dark setting builds tension; bright scenes signal hope." },
+    { questionNumber: 10, answer: "Accept any coherent alternate ending." },
+  ],
+};
