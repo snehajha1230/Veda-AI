@@ -23,7 +23,7 @@ export const SCHOOL_SHORT = "Delhi Public School, Bokaro Steel City";
 
 export const NAV_ITEMS = [
   { href: "/", label: "Home", icon: "home" as const },
-  { href: "/assignments", label: "Assignments", icon: "assignments" as const, badge: 32 },
+  { href: "/assignments", label: "Assignments", icon: "assignments" as const },
   { href: "/groups", label: "My Groups", icon: "groups" as const },
   { href: "/toolkit", label: "AI Teacher's Toolkit", icon: "toolkit" as const },
   { href: "/library", label: "My Library", icon: "library" as const },

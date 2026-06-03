@@ -19,7 +19,7 @@ import { useUIStore } from "@/store/uiStore";
 const links = [
   { href: "/", label: "Home", icon: Home },
   { href: "/groups", label: "My Groups", icon: Users },
-  { href: "/assignments", label: "Assignments", icon: ClipboardList, badge: 32 },
+  { href: "/assignments", label: "Assignments", icon: ClipboardList },
   { href: "/toolkit", label: "AI Teacher's Toolkit", icon: Sparkles },
   { href: "/library", label: "My Library", icon: Library },
 ];
@@ -47,7 +47,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
       </Link>
 
       <nav className="mt-6 flex flex-1 flex-col gap-1 overflow-y-auto">
-        {links.map(({ href, label, icon: Icon, badge }) => {
+        {links.map(({ href, label, icon: Icon }) => {
           const active =
             href === "/assignments"
               ? pathname.startsWith("/assignments")
@@ -67,11 +67,6 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
             >
               <Icon className="h-4 w-4 shrink-0" />
               <span className="flex-1">{label}</span>
-              {badge != null && (
-                <span className="rounded-full bg-red-500 px-1.5 py-0.5 text-[10px] font-semibold text-white">
-                  {badge}
-                </span>
-              )}
             </Link>
           );
         })}
