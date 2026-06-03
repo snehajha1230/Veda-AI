@@ -24,6 +24,8 @@ Default URLs (configure in `server/.env` if different):
 
 ## Quick start
 
+Install dependencies in **`server/`** and **`client/`** (or run `npm run install:all` from the repo root). Build the backend with `npm run build:server` from the root, or `cd server && npm run build`.
+
 ### 1. Backend
 
 ```bash
